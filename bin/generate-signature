@@ -47,8 +47,8 @@ SHA256SUM="$(sha256sum $filepath | cut -d " " -f 1)  $filename"
 info "generating sha512sum hash"
 SHA512SUM="$(sha512sum $filepath | cut -d " " -f 1)  $filename"
 
-TKL_KEY=tkl-$CODENAME-images.asc
-KEY_EMAIL=release-$CODENAME-images@turnkeylinux.org
+TKL_KEY=tkl-$CODENAME-piturnkey.asc
+KEY_EMAIL=yheneaul@gmail.com
 # first try local common
 if [[ -f "$FAB_PATH/common/keys/$TKL_KEY" ]]; then
     GET_KEY_COM="cat $FAB_PATH/common/keys/$TKL_KEY"

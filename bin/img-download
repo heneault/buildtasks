@@ -44,7 +44,7 @@ fi
 . $BT_CONFIG/aws.cfg &>/dev/null || true
 
 mkdir -p $outdir
-mirror_images="http://mirror.turnkeylinux.org/turnkeylinux/images"
+mirror_images="http://piturnkey.ddns.net/images"
 bucket_images="s3://turnkeylinux-builds/images"
 if ! wget --read-timeout=60 --tries=10 $mirror_images/img/$imgfile \
         -O $outdir/$imgfile; then

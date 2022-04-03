@@ -49,7 +49,7 @@ hashpath=$imgdir/$hashfile
 . $BT_CONFIG/aws.cfg &>/dev/null || true
 
 if [ ! -e $hashpath ]; then
-    mirror_src=http://releases.turnkeylinux.org/turnkey-$appname/$version/$hashfile
+    mirror_src=http://piturnkey.ddns.net/images/img/$hashfile
     bucket_src=s3://turnkeylinux-builds/metadata/$hashfile
     wget --read-timeout=60 --tries=10 $mirror_src -O $hashpath \
         || aws s3 cp $bucket_src $hashpath \
